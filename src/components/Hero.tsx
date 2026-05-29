@@ -9,15 +9,14 @@ export default function Hero() {
       className="relative w-full overflow-hidden"
       style={{ height: "80vh", minHeight: "560px" }}
     >
-      {/* Background video */}
+      {/* Background video — dark fallback bg avoids any flash before it paints */}
       <video
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 h-full w-full bg-[#0a0a0a] object-cover"
         autoPlay
         loop
         muted
         playsInline
         preload="auto"
-        poster="/assets/brand-reference.jpg"
         aria-hidden="true"
       >
         <source src="/assets/hero-animation.mp4" type="video/mp4" />
