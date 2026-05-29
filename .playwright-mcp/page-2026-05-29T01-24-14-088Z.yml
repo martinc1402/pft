@@ -1,0 +1,167 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e3]:
+      - navigation [ref=e8]:
+        - link "PFT — Performance Fitness Training, back to top" [ref=e9] [cursor=pointer]:
+          - /url: "#home"
+          - text: PFT
+        - link "Follow PFT on Instagram" [ref=e10] [cursor=pointer]:
+          - /url: https://www.instagram.com/jakesbroja_pft/
+          - img [ref=e11]
+      - generic [ref=e15]:
+        - heading "Performance Fitness Training" [level=1] [ref=e16]:
+          - text: Performance
+          - text: Fitness Training
+        - paragraph [ref=e17]: Move Better. Feel Stronger. Live Healthier.
+        - link "Train With Me" [ref=e18] [cursor=pointer]:
+          - /url: "#contact"
+    - generic [ref=e21]:
+      - generic [ref=e23]: About
+      - generic [ref=e24]:
+        - generic [ref=e25]:
+          - img "Jake Sbroja, founder of Performance Fitness Training" [ref=e27]
+          - paragraph [ref=e28]: Jake Sbroja/Founder & Head Coach
+        - generic [ref=e29]:
+          - heading "Raising the standard of health & performance" [level=2] [ref=e31]:
+            - text: Raising the standard of
+            - generic [ref=e32]: health & performance
+          - generic [ref=e33]:
+            - paragraph [ref=e35]: Performance Fitness Training and Rehabilitation was founded with the vision of raising industry standards and providing people with access to a high-quality, personalised approach to health and fitness. Established in 2015 by Jake Sbroja, an emerging coach driven by a strong passion for health, performance, and helping others, PFT was created to make a meaningful difference in people's lives through exercise.
+            - paragraph [ref=e37]: Jake Sbroja is a National-level Olympic weightlifter with tertiary qualifications in Exercise Physiology and Rehabilitation. Known for his attention to detail and commitment to achieving the best outcomes for clients, Jake uses evidence-based exercise strategies to support individuals across a wide range of needs and goals.
+            - paragraph [ref=e39]: Through Performance Fitness Training and Rehabilitation, Jake works with athletes of all levels, individuals living with disabilities, chronic health conditions, musculoskeletal injuries, as well as those simply seeking a premium, individualised service. PFT also collaborates closely with doctors, dietitians, and other allied health professionals to ensure clients receive the highest standard of care and support.
+            - paragraph [ref=e41]: Built on the belief that exercise exists on a continuum — and that everyone has the ability to improve their health, function, and performance through movement — PFT was created to empower people to move better, feel stronger, and live healthier lives.
+      - generic [ref=e42]:
+        - generic [ref=e44]: Services
+        - generic [ref=e45]:
+          - generic [ref=e47]:
+            - img [ref=e48]
+            - heading "Exercise for Chronic Diseases & Conditions" [level=3] [ref=e51]
+          - generic [ref=e53]:
+            - img [ref=e54]
+            - heading "Musculoskeletal Rehabilitation" [level=3] [ref=e58]
+          - generic [ref=e60]:
+            - img [ref=e61]
+            - heading "Athletic Development & Strength and Conditioning" [level=3] [ref=e63]
+          - generic [ref=e65]:
+            - img [ref=e66]
+            - heading "1 on 1 Personal Training" [level=3] [ref=e70]
+          - generic [ref=e72]:
+            - img [ref=e73]
+            - heading "Health Consultations" [level=3] [ref=e77]
+          - link "Looking for something tailored? Enquire now" [ref=e79] [cursor=pointer]:
+            - /url: "#contact"
+            - generic [ref=e80]: Looking for something tailored?
+            - generic [ref=e81]:
+              - text: Enquire now
+              - generic [ref=e82]: →
+      - generic [ref=e83]:
+        - generic [ref=e85]: Qualifications
+        - generic [ref=e86]:
+          - generic [ref=e88]: Masters in Clinical Exercise Physiology
+          - generic [ref=e90]: Bachelor of Sport and Exercise Science
+          - generic [ref=e92]: Diploma in Specialist Exercise (High Performance & Special Populations)
+          - generic [ref=e94]: NDIS Approved Trainer
+          - generic [ref=e96]: Qualified ASCA Strength & Conditioning Coach
+    - generic [ref=e98]:
+      - generic [ref=e99]:
+        - heading "What Clients Say" [level=2] [ref=e100]
+        - generic [ref=e101]:
+          - button "Previous testimonial" [ref=e102]:
+            - generic [ref=e103]: ←
+          - button "Next testimonial" [ref=e104]:
+            - generic [ref=e105]: →
+      - region "Client testimonials" [ref=e106]:
+        - generic [ref=e107]:
+          - figure [ref=e108]:
+            - generic [ref=e109]:
+              - generic [ref=e110]: “
+              - blockquote [ref=e111]: I am profoundly uncomfortable in a gym, yet needed help to combat wasting as a result of a chronic illness. Jake put me at ease and worked closely with me to uniformly raise my strength and improve my fitness. Jake has a genuine passion for fitness and a surprising depth of knowledge. I now consider him to be one of my specialists.
+              - generic [ref=e112]: Matthew D.
+          - figure [ref=e113]:
+            - generic [ref=e114]:
+              - generic [ref=e115]: “
+              - blockquote [ref=e116]: Jake is a great PT and my new benchmark for PT services. He's knowledgeable and supportive and has helped me rehabilitate from a significant back injury and go on to become stronger than I have been in years. His programs are responsive, personalised and well paced for busy people. Can't recommend him highly enough.
+              - generic [ref=e117]: Susan B.
+          - figure [ref=e118]:
+            - generic [ref=e119]:
+              - generic [ref=e120]: “
+              - blockquote [ref=e121]: Jake has played an instrumental role in improving my mother's safety and quality of life following her stroke, working with her to increase her strength and stability. He is compassionate, patient, and willing to continually challenge himself to benefit his clients. I am so grateful he is my mother's trainer.
+              - generic [ref=e122]: Sarah O.
+          - figure [ref=e123]:
+            - generic [ref=e124]:
+              - generic [ref=e125]: “
+              - blockquote [ref=e126]: I started with Jake to help my strength for sport. I've since left moving better, playing pain free, and feeling more athletic overall.
+              - generic [ref=e127]: Mark B.
+          - figure [ref=e128]:
+            - generic [ref=e129]:
+              - generic [ref=e130]: “
+              - blockquote [ref=e131]: Jake has helped me achieve so many strength and fitness goals and has made such a positive impact on my physical and mental wellbeing. I'm so grateful for the time and effort he's put in — I could not recommend him enough.
+              - generic [ref=e132]: Lauren M.
+      - generic [ref=e133]:
+        - button "Go to testimonial group 1" [ref=e134]
+        - button "Go to testimonial group 2" [ref=e135]
+        - button "Go to testimonial group 3" [ref=e136]
+        - button "Go to testimonial group 4" [ref=e137]
+    - generic [ref=e140]:
+      - generic [ref=e141]: Contact
+      - heading "Get In Touch" [level=2] [ref=e142]
+      - generic [ref=e143]:
+        - generic [ref=e144]:
+          - heading "Find Me Here" [level=3] [ref=e145]
+          - generic [ref=e146]:
+            - generic [ref=e147]:
+              - paragraph [ref=e148]: Kingston
+              - paragraph [ref=e149]: 23 Kennedy St, Kingston ACT 2604
+            - generic [ref=e150]:
+              - paragraph [ref=e151]: Curtin
+              - paragraph [ref=e152]: Curtin Shops, Basement/1 Curtin Pl, Curtin ACT 2605
+            - generic [ref=e153]:
+              - generic [ref=e154]:
+                - paragraph [ref=e155]: Phone
+                - 'link "Ph: 0452 355 811" [ref=e156] [cursor=pointer]':
+                  - /url: tel:0452355811
+              - link "@jakesbroja_pft" [ref=e157] [cursor=pointer]:
+                - /url: https://www.instagram.com/jakesbroja_pft/
+        - generic [ref=e158]:
+          - paragraph [ref=e159]: For a services information package or any business enquiries, fill out the form below.
+          - generic [ref=e160]:
+            - generic [ref=e161]:
+              - generic [ref=e162]:
+                - generic [ref=e163]: First Name
+                - textbox "First Name" [ref=e164]
+              - generic [ref=e165]:
+                - generic [ref=e166]: Last Name
+                - textbox "Last Name" [ref=e167]
+              - generic [ref=e168]:
+                - generic [ref=e169]: Email Address
+                - textbox "Email Address" [ref=e170]
+              - generic [ref=e171]:
+                - generic [ref=e172]: Subject
+                - textbox "Subject" [ref=e173]
+              - generic [ref=e174]:
+                - generic [ref=e175]: Message
+                - textbox "Message" [ref=e176]
+            - button "Send Message" [ref=e177]
+    - generic [ref=e179]:
+      - generic [ref=e180]:
+        - generic [ref=e181]:
+          - link "PFT, back to top" [ref=e182] [cursor=pointer]:
+            - /url: "#home"
+            - text: PFT
+          - paragraph [ref=e183]: Performance Fitness Training & Rehabilitation. Move better, feel stronger, live healthier.
+        - navigation "Footer" [ref=e184]:
+          - link "About" [ref=e185] [cursor=pointer]:
+            - /url: "#about"
+          - link "Testimonials" [ref=e186] [cursor=pointer]:
+            - /url: "#testimonials"
+          - link "Contact" [ref=e187] [cursor=pointer]:
+            - /url: "#contact"
+          - link "0452 355 811" [ref=e188] [cursor=pointer]:
+            - /url: tel:0452355811
+        - link "Follow PFT on Instagram" [ref=e189] [cursor=pointer]:
+          - /url: https://www.instagram.com/jakesbroja_pft/
+          - img [ref=e190]
+      - paragraph [ref=e195]: © 2026Performance Fitness Training & Rehabilitation. All rights reserved.
+  - button "Open Next.js Dev Tools" [ref=e201] [cursor=pointer]:
+    - img [ref=e202]
+  - alert [ref=e205]
