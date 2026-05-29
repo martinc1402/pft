@@ -2,16 +2,16 @@
 
 /* ============================================================
    Performance Fitness Training — Design System
-   Premium dark-luxury aesthetic with electric-blue accent.
+   Premium dark-luxury aesthetic with PFT-orange accent.
    ============================================================ */
 
 :root {
-  /* Base surfaces — near-black, progressively lighter */
-  --pft-black: #08090b;
-  --pft-base: #0a0c0f;
-  --pft-elevated: #101317;
-  --pft-elevated-2: #14181d;
-  --pft-surface: #161b21;
+  /* Base surfaces — consistent near-black, progressively lighter */
+  --pft-black: #050505; /* footer — grounds the page */
+  --pft-base: #0a0a0a; /* primary background, all main sections */
+  --pft-elevated: #141414;
+  --pft-elevated-2: #1a1a1a; /* cards, inputs, service tiles */
+  --pft-surface: #1a1a1a;
   --pft-line: rgba(255, 255, 255, 0.08);
   --pft-line-strong: rgba(255, 255, 255, 0.14);
 
@@ -20,11 +20,11 @@
   --pft-muted: #9aa1aa;
   --pft-faint: #6a727c;
 
-  /* Electric blue accent */
-  --pft-accent: #2e8bff;
-  --pft-accent-bright: #4da3ff;
-  --pft-accent-deep: #1769d6;
-  --pft-accent-glow: rgba(46, 139, 255, 0.35);
+  /* PFT orange accent */
+  --pft-accent: #e8470a;
+  --pft-accent-bright: #ff5c1f;
+  --pft-accent-deep: #c23a06;
+  --pft-accent-glow: rgba(232, 71, 10, 0.35);
 }
 
 @theme inline {
@@ -82,24 +82,32 @@ body {
   font-family: var(--font-display), system-ui, sans-serif;
 }
 
-/* Small dash-prefixed section eyebrow, mirroring the brand reference */
+/* Small dash-prefixed section eyebrow — orange, works on dark & white */
 .eyebrow {
   font-family: var(--font-display), system-ui, sans-serif;
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.34em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--pft-faint);
+  color: var(--pft-accent);
   display: inline-flex;
   align-items: center;
-  gap: 0.85rem;
+  gap: 0.7rem;
 }
 .eyebrow::before {
   content: "";
-  width: 2.25rem;
+  width: 1.6rem;
   height: 1px;
   background: var(--pft-accent);
   display: inline-block;
+}
+
+/* Thin orange rule beneath an eyebrow, above the section heading */
+.section-rule {
+  margin-top: 0.95rem;
+  width: 60px;
+  height: 2px;
+  background: var(--pft-accent);
 }
 
 .section-heading {
@@ -110,12 +118,12 @@ body {
   line-height: 1.08;
 }
 
-/* ---------- Reveal-on-scroll ---------- */
+/* ---------- Reveal-on-scroll (fast + understated) ---------- */
 .reveal {
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(18px);
+  transition: opacity 0.38s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.38s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 .reveal.is-visible {
@@ -123,12 +131,28 @@ body {
   transform: none;
 }
 
+/* ---------- Scroll-down indicator ---------- */
+@keyframes pft-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translateY(7px);
+    opacity: 1;
+  }
+}
+.scroll-indicator {
+  animation: pft-bounce 2s ease-in-out infinite;
+}
+
 /* ---------- Accent border / glow for headshot ---------- */
 .headshot-frame {
   position: relative;
-  border: 1px solid rgba(46, 139, 255, 0.35);
-  box-shadow: 0 0 0 1px rgba(46, 139, 255, 0.08),
-    0 30px 80px -30px rgba(46, 139, 255, 0.45),
+  border: 1px solid rgba(232, 71, 10, 0.45);
+  box-shadow: 0 0 0 1px rgba(232, 71, 10, 0.1),
+    0 30px 80px -30px rgba(232, 71, 10, 0.5),
     0 20px 60px -40px rgba(0, 0, 0, 0.9);
 }
 .headshot-frame::after {
@@ -136,16 +160,16 @@ body {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  box-shadow: inset 0 0 80px -40px rgba(46, 139, 255, 0.6);
+  box-shadow: inset 0 0 80px -40px rgba(232, 71, 10, 0.65);
 }
 
-/* ---------- Ghost CTA ---------- */
+/* ---------- Ghost CTA (orange border, fills orange on hover) ---------- */
 .btn-ghost {
   position: relative;
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--pft-accent);
   color: var(--pft-white);
   font-family: var(--font-display), system-ui, sans-serif;
   font-weight: 500;
@@ -153,7 +177,7 @@ body {
   text-transform: uppercase;
   font-size: 0.8rem;
   padding: 1.05rem 2.4rem;
-  background: rgba(8, 9, 11, 0.18);
+  background: rgba(5, 5, 5, 0.18);
   backdrop-filter: blur(2px);
   transition: border-color 0.4s ease, color 0.4s ease, background 0.4s ease,
     box-shadow 0.4s ease, letter-spacing 0.4s ease;
@@ -162,8 +186,8 @@ body {
 .btn-ghost:hover {
   border-color: var(--pft-accent);
   color: #fff;
-  background: rgba(46, 139, 255, 0.12);
-  box-shadow: 0 0 30px -6px var(--pft-accent-glow);
+  background: var(--pft-accent);
+  box-shadow: 0 0 34px -6px var(--pft-accent-glow);
   letter-spacing: 0.26em;
 }
 
@@ -174,17 +198,19 @@ body {
   justify-content: center;
   gap: 0.6rem;
   background: var(--pft-accent);
-  color: #04121f;
+  color: #fff;
   font-family: var(--font-display), system-ui, sans-serif;
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   font-size: 0.82rem;
   padding: 1.1rem 2rem;
-  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease,
+    filter 0.3s ease;
 }
 .btn-accent:hover {
-  background: var(--pft-accent-bright);
+  background: var(--pft-accent);
+  filter: brightness(1.12);
   box-shadow: 0 12px 40px -12px var(--pft-accent-glow);
 }
 .btn-accent:active {
@@ -199,23 +225,23 @@ body {
 /* ---------- Form fields ---------- */
 .field-input {
   width: 100%;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid var(--pft-line);
-  color: var(--pft-white);
+  background: #1a1a1a;
+  border: 1px solid #333333;
+  color: #ffffff;
   font-family: var(--font-body), system-ui, sans-serif;
-  font-size: 0.95rem;
+  font-size: 1rem;
   padding: 0.95rem 1.05rem;
   transition: border-color 0.25s ease, background 0.25s ease,
     box-shadow 0.25s ease;
   outline: none;
 }
 .field-input::placeholder {
-  color: var(--pft-faint);
+  color: #666666;
 }
 .field-input:focus {
   border-color: var(--pft-accent);
-  background: rgba(46, 139, 255, 0.04);
-  box-shadow: 0 0 0 3px rgba(46, 139, 255, 0.12);
+  background: #1f1f1f;
+  box-shadow: 0 0 0 3px rgba(232, 71, 10, 0.16);
 }
 .field-input[aria-invalid="true"] {
   border-color: #ff5468;
@@ -224,11 +250,11 @@ body {
 
 .field-label {
   font-family: var(--font-display), system-ui, sans-serif;
-  font-size: 0.7rem;
+  font-size: 11px;
   font-weight: 500;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--pft-muted);
+  color: #ffffff;
   margin-bottom: 0.55rem;
   display: block;
 }
@@ -236,9 +262,9 @@ body {
 /* ---------- Service tile ---------- */
 .service-tile {
   position: relative;
-  background: var(--pft-elevated);
+  background: var(--pft-elevated-2);
   border: 1px solid var(--pft-line);
-  padding: 2rem 1.75rem;
+  padding: 28px;
   transition: border-color 0.4s ease, background 0.4s ease, transform 0.4s ease;
   overflow: hidden;
 }
@@ -248,38 +274,40 @@ body {
   left: 0;
   top: 0;
   height: 100%;
-  width: 2px;
+  width: 3px;
   background: var(--pft-accent);
   transform: scaleY(0);
   transform-origin: top;
   transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .service-tile:hover {
-  border-color: var(--pft-line-strong);
-  background: var(--pft-elevated-2);
+  border-color: rgba(232, 71, 10, 0.5);
+  background: #1f1f1f;
   transform: translateY(-4px);
 }
 .service-tile:hover::before {
   transform: scaleY(1);
 }
 
-/* ---------- Qualification pill ---------- */
+/* ---------- Qualification pill (dark charcoal section) ---------- */
 .pill {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  border: 1px solid var(--pft-line-strong);
+  border: 1.5px solid var(--pft-accent);
   border-radius: 999px;
   padding: 0.6rem 1.15rem;
   font-size: 0.82rem;
-  color: var(--pft-muted);
-  background: rgba(255, 255, 255, 0.015);
-  transition: border-color 0.3s ease, color 0.3s ease, background 0.3s ease;
+  color: #e8e8e8;
+  background: #1e1e1e;
+  transition: border-color 0.3s ease, color 0.3s ease, background 0.3s ease,
+    box-shadow 0.3s ease;
 }
 .pill:hover {
   border-color: var(--pft-accent);
-  color: var(--pft-white);
-  background: rgba(46, 139, 255, 0.06);
+  color: #ffffff;
+  background: rgba(232, 71, 10, 0.12);
+  box-shadow: 0 4px 18px -8px var(--pft-accent-glow);
 }
 .pill::before {
   content: "";
@@ -289,19 +317,21 @@ body {
   background: var(--pft-accent);
 }
 
-/* ---------- Address card ---------- */
+/* ---------- Address card (orange left accent) ---------- */
 .address-card {
   border: 1px solid var(--pft-line);
+  border-left: 2px solid var(--pft-accent);
   background: var(--pft-elevated);
   padding: 1.75rem;
   transition: border-color 0.35s ease, background 0.35s ease;
 }
 .address-card:hover {
   border-color: var(--pft-line-strong);
+  border-left-color: var(--pft-accent);
   background: var(--pft-elevated-2);
 }
 
-/* Thin film-grain / vignette top-bar accent */
+/* Thin divider — neutral hairline + orange variant */
 .hairline {
   height: 1px;
   width: 100%;
@@ -311,4 +341,57 @@ body {
     var(--pft-line-strong),
     transparent
   );
+}
+.divider-accent {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--pft-accent),
+    rgba(232, 71, 10, 0.15) 55%,
+    transparent
+  );
+}
+
+/* Orange underline CTA link (e.g. standalone Services CTA) */
+.link-underline {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--pft-accent);
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--pft-accent);
+  transition: color 0.3s ease, border-color 0.3s ease, gap 0.3s ease;
+}
+.link-underline:hover {
+  color: var(--pft-accent-bright);
+  border-bottom-color: var(--pft-accent-bright);
+}
+
+/* Footer nav link — orange underline on hover */
+.footer-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+.footer-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 1px;
+  width: 100%;
+  background: var(--pft-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.footer-link:hover {
+  color: #fff;
+}
+.footer-link:hover::after {
+  transform: scaleX(1);
 }

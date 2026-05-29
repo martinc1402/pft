@@ -26,14 +26,15 @@ export default function Hero() {
       {/* Dark overlay for legibility */}
       <div
         className="absolute inset-0"
+        style={{ background: "rgba(0,0,0,0.45)" }}
+      />
+      {/* Bottom fade into the base background for a seamless section join */}
+      <div
+        className="absolute inset-x-0 bottom-0 h-40"
         style={{
           background:
-            "linear-gradient(180deg, rgba(8,9,11,0.55) 0%, rgba(8,9,11,0.35) 35%, rgba(8,9,11,0.55) 70%, rgba(8,9,11,0.92) 100%)",
+            "linear-gradient(180deg, transparent 0%, var(--pft-base) 100%)",
         }}
-      />
-      <div
-        className="absolute inset-0"
-        style={{ background: "rgba(8,9,11,0.28)" }}
       />
 
       {/* Transparent nav over the video */}
@@ -41,7 +42,7 @@ export default function Hero() {
         <nav className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-6 sm:px-10 sm:py-8">
           <Link
             href="#home"
-            className="font-display text-2xl font-bold tracking-[0.4em] text-white sm:text-3xl"
+            className="font-display text-2xl font-bold tracking-[0.4em] text-[var(--pft-accent)] sm:text-3xl"
             aria-label="PFT — Performance Fitness Training, back to top"
           >
             PFT
@@ -72,8 +73,28 @@ export default function Hero() {
         </Link>
       </div>
 
-      {/* Bottom hairline */}
-      <div className="absolute inset-x-0 bottom-0 z-10 hairline" />
+      {/* Scroll-down indicator */}
+      <Link
+        href="#about"
+        aria-label="Scroll to about section"
+        className="absolute inset-x-0 bottom-8 z-10 mx-auto flex w-min flex-col items-center gap-2 text-white/70 transition-colors hover:text-[var(--pft-accent-bright)]"
+      >
+        <span className="font-display text-[0.6rem] uppercase tracking-[0.3em]">
+          Scroll
+        </span>
+        <svg
+          className="scroll-indicator h-5 w-5"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M6 9l6 6 6-6" />
+        </svg>
+      </Link>
     </section>
   );
 }

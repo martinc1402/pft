@@ -10,7 +10,7 @@ export default function Footer() {
           <div>
             <Link
               href="#home"
-              className="font-display text-2xl font-bold tracking-[0.4em] text-white"
+              className="font-display text-2xl font-bold tracking-[0.4em] text-[var(--pft-accent)]"
               aria-label="PFT, back to top"
             >
               PFT
@@ -25,24 +25,18 @@ export default function Footer() {
             aria-label="Footer"
             className="flex flex-wrap gap-x-8 gap-y-3 font-display text-xs uppercase tracking-[0.2em] text-[var(--pft-muted)]"
           >
-            <Link href="#about" className="transition-colors hover:text-white">
+            <Link href="#about" className="footer-link">
               About
             </Link>
-            <Link
-              href="#testimonials"
-              className="transition-colors hover:text-white"
-            >
+            <Link href="#testimonials" className="footer-link">
               Testimonials
             </Link>
-            <Link
-              href="#contact"
-              className="transition-colors hover:text-white"
-            >
+            <Link href="#contact" className="footer-link">
               Contact
             </Link>
             <a
               href={`tel:${phone.replace(/\s/g, "")}`}
-              className="transition-colors hover:text-white"
+              className="footer-link"
             >
               {phone}
             </a>

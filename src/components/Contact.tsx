@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { locations, phone, INSTAGRAM_URL } from "@/lib/content";
+import SectionLabel from "./SectionLabel";
 
 type FieldName = "firstName" | "lastName" | "email" | "subject" | "message";
 
@@ -95,10 +96,10 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="bg-[var(--pft-base)] py-24 sm:py-32">
+    <section id="contact" className="bg-[var(--pft-base)] py-[120px]">
       <div className="mx-auto max-w-[1400px] px-6 sm:px-10">
-        <span className="eyebrow">Contact</span>
-        <h2 className="section-heading mt-6 text-3xl font-light tracking-[0.18em] text-white sm:text-4xl lg:text-5xl">
+        <SectionLabel>Contact</SectionLabel>
+        <h2 className="section-heading mt-4 text-3xl font-light tracking-[0.18em] text-white sm:text-4xl lg:text-5xl">
           Get In Touch
         </h2>
 
@@ -145,7 +146,7 @@ export default function Contact() {
 
           {/* Right — form */}
           <div>
-            <p className="text-[var(--pft-muted)]">
+            <p className="text-[17px] leading-[1.8] text-[#d0d0d0]">
               For a services information package or any business enquiries, fill
               out the form below.
             </p>
@@ -153,7 +154,7 @@ export default function Contact() {
             {submitted ? (
               <div
                 role="status"
-                className="mt-8 border border-[rgba(46,139,255,0.4)] bg-[rgba(46,139,255,0.07)] p-8"
+                className="mt-8 border-l-2 border border-[rgba(232,71,10,0.45)] border-l-[var(--pft-accent)] bg-[rgba(232,71,10,0.08)] p-8"
               >
                 <p className="font-display text-sm font-semibold uppercase tracking-[0.2em] text-[var(--pft-accent-bright)]">
                   Message sent
